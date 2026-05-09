@@ -1,224 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
+    <!-- Fondo -->
     <ImageView
         android:id="@+id/background"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/button"
         android:scaleType="centerCrop"
+        android:src="@drawable/peaceful_forest_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/peaceful_forest_background" />
+        tools:ignore="RedundantDescriptionCheck" />
 
+    <!-- Parte superior -->
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/topBar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="300dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <Button
             android:id="@+id/AbsOctet"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="-1"
-            android:textSize="30sp" />
+            android:text="@string/_1"
+            android:textColor="#7CB342"
+            android:textSize="26sp" />
 
         <TextView
             android:id="@+id/octetText"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="C2"
-            android:textColor="@color/white"
-            android:textSize="48sp" />
+            android:text="@string/c2"
+            android:textColor="@android:color/white"
+            android:textSize="42sp" />
 
         <Button
             android:id="@+id/AddOctet"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="+1"
-            android:textSize="30sp" />
+            android:text="@string/__1"
+            android:textColor="#7CB342"
+            android:textSize="26sp" />
+
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="150dp"
+    <!-- Piano -->
+    <FrameLayout
+        android:id="@+id/pianoContainer"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- Teclas blancas -->
         <LinearLayout
             android:id="@+id/pianoWhiteLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="32dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/teclaC"
-                android:layout_width="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:text="Button" />
+                android:backgroundTint="@android:color/white"
+                android:contentDescription="@string/button"
+                android:text=""
+                tools:ignore="RedundantDescriptionCheck,DuplicateSpeakableTextCheck" />
 
             <Button
                 android:id="@+id/teclaD"
-                android:layout_width="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:text="Button" />
+                android:backgroundTint="@android:color/white"
+                android:contentDescription="@string/button"
+                android:text=""
+                tools:ignore="RedundantDescriptionCheck" />
 
             <Button
                 android:id="@+id/teclaE"
-                android:layout_width="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:text="Button" />
+                android:backgroundTint="@android:color/white"
+                android:contentDescription="@string/button"
+                android:text=""
+                tools:ignore="RedundantDescriptionCheck" />
 
             <Button
                 android:id="@+id/teclaF"
-                android:layout_width="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:text="Button" />
+                android:backgroundTint="@android:color/white"
+                android:contentDescription="@string/button"
+                android:text=""
+                tools:ignore="RedundantDescriptionCheck" />
 
             <Button
                 android:id="@+id/teclaG"
-                android:layout_width="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:text="Button" />
+                android:backgroundTint="@android:color/white"
+                android:contentDescription="@string/button"
+                android:text=""
+                tools:ignore="RedundantDescriptionCheck" />
 
             <Button
                 android:id="@+id/teclaA"
-                android:layout_width="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:text="Button"
-                android:textColor="@color/white" />
+                android:backgroundTint="@android:color/white"
+                android:contentDescription="@string/button"
+                android:text=""
+                tools:ignore="RedundantDescriptionCheck" />
 
             <Button
                 android:id="@+id/teclaB"
-                android:layout_width="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:text="Button"
-                android:textColor="@color/white" />
+                android:backgroundTint="@android:color/white"
+                android:contentDescription="@string/button"
+                android:text=""
+                tools:ignore="RedundantDescriptionCheck" />
+
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/teclaCb"
+            android:layout_width="48dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="95dp"
+            android:backgroundTint="@android:color/black"
+            android:contentDescription="@string/button"
+            android:text=""
+            tools:ignore="RedundantDescriptionCheck,RedundantDescriptionCheck" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="160dp"
-        android:layout_marginBottom="105dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/teclaDb"
+            android:layout_width="48dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="215dp"
+            android:backgroundTint="@android:color/black"
+            android:contentDescription="@string/button"
+            android:text=""
+            tools:ignore="RedundantDescriptionCheck" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="83dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/teclaFb"
+            android:layout_width="48dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="455dp"
+            android:backgroundTint="@android:color/black"
+            android:contentDescription="@string/button"
+            android:text=""
+            tools:ignore="RedundantDescriptionCheck" />
 
-            <Button
-                android:id="@+id/teclaCb"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/black"
-                android:text="Button"
-                android:textColor="@color/black" />
+        <Button
+            android:id="@+id/teclaGb"
+            android:layout_width="48dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="575dp"
+            android:backgroundTint="@android:color/black"
+            android:contentDescription="@string/button"
+            android:text=""
+            tools:ignore="RedundantDescriptionCheck" />
 
-            <Button
-                android:id="@+id/teclaDb"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/black"
-                android:insetLeft="25dp"
-                android:text="Button"
-                android:textColor="@color/black" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/teclaAb"
+            android:layout_width="48dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="695dp"
+            android:backgroundTint="@android:color/black"
+            android:contentDescription="@string/button"
+            android:text=""
+            tools:ignore="RedundantDescriptionCheck" />
 
-        <LinearLayout
-            android:layout_width="325dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="60dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <Button
-                android:id="@+id/teclaFb"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/black"
-                android:insetLeft="25dp"
-                android:text="Button"
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/teclaGb"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/black"
-                android:insetLeft="25dp"
-                android:text="Button"
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/teclaAb"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/black"
-                android:insetLeft="25dp"
-                android:text="Button"
-                android:textColor="@color/black" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

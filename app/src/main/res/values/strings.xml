@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PianoEjercicio</string>
+    <string name="_1">-1</string>
+    <string name="button">Button</string>
+    <string name="button2">Button</string>
+    <string name="c2">C2</string>
+    <string name="__1">+1</string>
+    <string name="button3">Button</string>
 </resources>
